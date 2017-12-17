@@ -6,8 +6,8 @@ import subprocess
 from jinja2 import Environment, FileSystemLoader
 
 env = Environment(loader=FileSystemLoader('templates'))
-if os.environ.get('REDIS_URL'):
-    r = redis.from_url(os.environ.get("REDIS_URL"))
+if os.environ.get('REDISCLOUD_URL'):
+    r = redis.from_url(os.environ.get("REDISCLOUD_URL"))
 else:
     r = redis.StrictRedis(decode_responses=True, host='localhost', port=6379, db=0)
 
