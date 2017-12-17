@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	 <link href="/static/css/style.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<table>
+			<caption>Search By Result</caption>
+			<form action="/search">
+				<input type="text" name="name">
+				<button type="submit">search</button>
+			</form>
+			<thead>
+				<tr>
+					<th scope="col">CODE</th>
+					<th scope="col">NAME</th>
+					<th scope="col">OPEN</th>
+					<th scope="col">HIGH</th>
+					<th scope="col">LOW</th>
+					<th scope="col">CLOSE</th>
+				</tr>
+			</thead>
+			<tbody>
+					<tr>
+						<td data-label="CODE">{{code}}</td>
+						<td data-label="NAME">{{name}}</td>
+						<td data-label="OPEN">{{open}}</td>
+						<td data-label="HIGH">{{high}}</td>
+						<td data-label="LOW">{{low}}</td>
+						<td data-label="CLOSE">{{close}}</td>
+					</tr>
+			</tbody>
+		</table>
+		</div>
+	</body>
+</html>

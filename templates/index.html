@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	 <link href="/static/css/style.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<table>
+			<caption>Top 10 Stocks of the Day</caption>
+			<form action="/search">
+				<input type="text" name="name">
+				<button type="submit">search</button>
+			</form>
+			<thead>
+				<tr>
+					<th scope="col">CODE</th>
+					<th scope="col">NAME</th>
+					<th scope="col">OPEN</th>
+					<th scope="col">HIGH</th>
+					<th scope="col">LOW</th>
+					<th scope="col">CLOSE</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for i in data %}
+					<tr>
+						<td data-label="CODE">{{i.code}}</td>
+						<td data-label="NAME">{{i.name}}</td>
+						<td data-label="OPEN">{{i.open}}</td>
+						<td data-label="HIGH">{{i.high}}</td>
+						<td data-label="LOW">{{i.low}}</td>
+						<td data-label="CLOSE">{{i.close}}</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		</div>
+	</body>
+</html>
